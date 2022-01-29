@@ -20,7 +20,6 @@ export const Container = styled.div`
   position: sticky;
   top: 0;
   z-index: 9999;
-
 `;
 
 export const Header = styled.div`
@@ -190,3 +189,112 @@ letter-spacing: 0.4px;
 color: #2D3A45;
 margin-left: 12px;
 `
+
+export const Titles=styled.div`
+  font-family: SFProDisplay;
+font-size: 19px;
+line-height: 18px;
+letter-spacing: 0.533333px;
+color: #2D3A45;
+font-weight: 600;
+.ant-drawer-close{
+  background-color: red;
+}
+`
+export const Form=styled.form`
+margin-top: 32px;
+margin: auto;
+`
+export const Content=styled.div`
+margin: 16px 0px;
+`
+
+export const Label=styled.label`
+font-family: SFProDisplay;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.4px;
+color: #2D3A45;
+mix-blend-mode: normal;
+opacity: 0.6;
+margin-bottom: 6px;
+`
+export const Inputs1=styled.input`
+border: 1px solid #EDEFF3;
+box-sizing: border-box;
+border-radius: 6px;
+height: 44px;
+width: 318px;
+font-family: SFProDisplay;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.4px;
+color: #2D3A45;
+text-indent: 6px;
+`
+export const Select=styled.select`
+border: 1px solid #EDEFF3;
+box-sizing: border-box;
+border-radius: 6px;
+height: 44px;
+width: 318px;
+`
+
+export const Option=styled.option`
+font-family: SFProDisplay;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.4px;
+color: #2D3A45;
+`
+
+export const ImgDowloand=styled.div`
+height: 97px !important;
+width: 318px;
+border: 1px dashed #EDEFF3;
+box-sizing: border-box;
+border-radius: 6px;
+margin-bottom: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+`
+export const Buttons=styled.div`
+font-family: SFProDisplay;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0.466667px;
+color: #FFFFFF;
+background: #20D472;
+border-radius: 4px;
+width: 118px;
+height: 35px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 220px;
+cursor: pointer;
+transition: all .8s ease-in-out;
+:hover{
+  transform: scale(1.1);
+  transition: all .8s ease-in-out;
+}
+`
+
+export const Imgs3=styled.img`
+width: 22px;
+height: 18px;
+`
+export const Ass=styled.a`
+font-family: SFProDisplay;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.4px;
+color: #2D3A45;
+mix-blend-mode: normal;
+opacity: 0.6;
+margin-bottom: 11px;
+`
+
+

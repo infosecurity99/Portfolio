@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { Drawer, Alert,Modal, Button  } from 'antd';
+import { Drawer,Modal  } from 'antd';
 import 'antd/dist/antd.css';
 import {
-  Add,
-  Header,
-  MenuH,
-  MenuV,
-  Toggle,
-  Wrapper,
-  IconWrapper,
+  Add,Titles,Ass,
+  Header,Label,Inputs1,
+  MenuH,Select,Option,
+  MenuV,Buttons,
+  Toggle,ImgDowloand,
+  Wrapper,Content,Imgs3,
+  IconWrapper,Form,
   Input,SortContent,
   InputWraper,Search,Sort,SortImg,Ul ,Li ,InputCkeckBox,TextLi
 } from './style';
 import search from '../../../assets/imgs/search.png'
 import sort from '../../../assets/imgs/sort.png'
+import dow from '../../../assets/imgs/dow.png'
 export const Mahsulotqoshish= ({ onClick }) => {
   const [isActive, setIsActive] = useState('Yangi');
   const [on, setOn] = useState(true);
@@ -91,11 +92,51 @@ const [visible, setVisible] = useState(false);
          
       </Wrapper>
   
-      <Drawer title="Basic Drawer" placement="right" onClose={onClose} visible={visible}>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      </Drawer>
+        <Drawer title="Basic Drawer" placement="right" onClose={onClose} visible={visible}
+        headerStyle={{background:"red",display:'none' ,position:'relative'}}>
+
+
+           <Titles>Yangi maxsulot qo’shish</Titles>
+
+           <Form>
+
+                <Content>
+                     <Label>Maxsulot nomi</Label>
+                     <Inputs1 placeholder='Chizburger' />
+                </Content>
+                
+                <Content>
+                    <Label>Kategoriya</Label>
+
+                     <Select>
+                         <Option>Burger</Option>
+                         <Option>Pizza</Option> 
+                     </Select>
+
+              </Content>
+
+              <Content>
+                   <Label>Narxi</Label>
+                   <Inputs1 placeholder='18,500 UZS' />
+              </Content>
+
+              <Content>
+                    <Label>Qo’shimcha ma’lumot</Label>
+                   <Inputs1 placeholder='Katta burgur, 2 karra pishloq bor' />
+              </Content>
+
+              <Content>
+                   <ImgDowloand>
+                        <Imgs3 src={dow}/>
+                        <Ass href="dowloand">Maxsulot rasmini yuklang</Ass>
+                  </ImgDowloand>
+              </Content>
+
+              <Buttons>Saqlash</Buttons>
+           </Form>
+       
+       </Drawer>
+
     </Header>
   );
 };
