@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Drawer,Modal  } from 'antd';
+import { Drawer,Modal,TimePicker  } from 'antd';
 import 'antd/dist/antd.css';
+import moment from 'moment';
 import {
   GoogleMap,
   Marker,
@@ -169,9 +170,9 @@ const [visible, setVisible] = useState(false);
               <Content>
                   <Label>Ish vaqti</Label>
                    <InputWrapers1>
-                      <Inputs1 kel placeholder='09:00' />
-                         <LineInput styled={{margin:'0px 5px'}}></LineInput>
-                      <Inputs1 kel  placeholder='20:00' />
+                         <TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} size="large" />
+                               <LineInput styled={{margin:'0px 5px'}}></LineInput>
+                         <TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} size="large" />
                    </InputWrapers1>
              </Content>
 

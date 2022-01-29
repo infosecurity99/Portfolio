@@ -13,6 +13,7 @@ import Buyurtmalar from '../pages/Buyurtmalar';
 import Maxsulotlar from '../components/Mahsulotlar/index'
 import Kategoriya from '../components/Kategoriya/index'
 import Filiallar  from '../components/Filiallar/index'
+import Mijozlar from '../components/Mijozlar/index'
 
 export const sidebar = [
   {
@@ -52,7 +53,7 @@ export const sidebar = [
     title: 'Mijozlar',
     path: '/mijozlar',
     Icon: mijozlar,
-    Component: Generic,
+    Component: Mijozlar,
     hidden: false,
   },
   {
