@@ -26,5 +26,5 @@ height: 22px;
 mix-blend-mode: normal;
 opacity: 0.3;
 border: 1px solid #8D9BA8;
-margin-right: 11px;
+margin-right: 14px;
 `

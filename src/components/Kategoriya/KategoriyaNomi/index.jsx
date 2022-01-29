@@ -3,13 +3,11 @@ import {Container ,Content,List,Line} from './style'
 const KategoriyaNomi = () => {
   return <Container>
          <Content>
-              <List  style={{marginRight:'186px' ,marginLeft:'76px'}}>Maxsulot</List>
+              <List  style={{marginRight:'186px' ,marginLeft:'76px'}}>Kategoriya (UZ)</List>
                   <Line></Line>
-              <List style={{marginRight:'103.5px'}}>Kategoriya</List>
+              <List style={{marginRight:'166.5px'}}>Kategoriya (Ru)</List>
                   <Line></Line>
-              <List style={{marginRight:'135px'}}>Narxi</List>
-                   <Line></Line>
-              <List style={{marginRight:'187.5px'}}>Qo’shimcha</List>
+              <List style={{marginRight:'187.5px'}}>Bosh kategoriya</List>
                   <Line></Line>
               <List>ACTION</List>
          </Content>

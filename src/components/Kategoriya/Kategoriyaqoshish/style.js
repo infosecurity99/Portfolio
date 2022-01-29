@@ -202,7 +202,7 @@ font-weight: 600;
 }
 `
 export const Form=styled.form`
-margin-top: 32px;
+margin-top: 44px;
 margin: auto;
 `
 export const Content=styled.div`
@@ -233,19 +233,44 @@ color: #2D3A45;
 text-indent: 6px;
 `
 export const Select=styled.select`
+height: 44px;
+width: 279px;
+border: 1px solid #EDEFF3;
+`
+export const SelectWrap=styled.div`
+height: 44px;
+width: 318px;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
 border: 1px solid #EDEFF3;
 box-sizing: border-box;
 border-radius: 6px;
-height: 44px;
-width: 318px;
+`
+export const Inputk=styled.input`
+height: 14px;
+width: 14px;
+background: #FCB600;
+border-radius: 2px;
 `
 
+export const InputkWraper=styled.div`
+background: #EDEFF3;
+border-radius: 6px 0px 0px 6px;
+height: 44px;
+width: 44px;
+display: flex;
+align-items: center;
+justify-content: center;
+`
 export const Option=styled.option`
 font-family: SFProDisplay;
 font-size: 12px;
 line-height: 18px;
 letter-spacing: 0.4px;
 color: #2D3A45;
+padding: 0px 10px;
 `
 
 export const ImgDowloand=styled.div`
@@ -273,7 +298,7 @@ height: 35px;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 220px;
+margin-top: 430px;
 cursor: pointer;
 transition: all .8s ease-in-out;
 :hover{

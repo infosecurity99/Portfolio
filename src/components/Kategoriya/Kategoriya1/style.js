@@ -24,28 +24,22 @@ export const CardImg=styled.img`
 margin: 0px 34px 0px 18px;
 `
 export const Title=styled.div`
-margin-right: 106px;
+margin-right: 219px;
+margin-left: 18px;
 font-family: SFProDisplay;
 font-size: 13px;
 line-height: 15px;
 color: #2D3A45;
 `
 export const Kategoriya=styled.div`
-margin-right: 133px;
-font-family: SFProDisplay;
-font-size: 13px;
-line-height: 15px;
-color: #2D3A45;
-`
-export const Price=styled.div`
-margin-right: 93px;
+margin-right: 230px;
 font-family: SFProDisplay;
 font-size: 13px;
 line-height: 15px;
 color: #2D3A45;
 `
 export const OtherName=styled.div`
-margin-right: 160px;
+margin-right: 244px;
 font-family: SFProDisplay;
 font-size: 13px;
 line-height: 15px;
