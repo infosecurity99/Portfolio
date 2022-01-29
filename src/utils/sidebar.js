@@ -11,6 +11,8 @@ import Generic from '../pages/Generic';
 import Katalog from '../pages/Katalog';
 import Buyurtmalar from '../pages/Buyurtmalar';
 import Maxsulotlar from '../components/Mahsulotlar/index'
+import Kategoriya from '../components/Kategoriya/index'
+
 export const sidebar = [
   {
     id: 1,
@@ -33,7 +35,7 @@ export const sidebar = [
     title: 'Kategoriya',
     path: '/kategoriya',
     Icon: kategoriya,
-    Component: Generic,
+    Component: Kategoriya,
     hidden: false,
   },
   {
