@@ -135,33 +135,6 @@ export const Search=styled.img`
 width: 16px;
 height: 16px;
 `
-export const Sort=styled.div`
-width: 48px;
-height: 48px;
-background: #EDEFF3;
-border-radius: 24px;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-`
-
-export const SortContent=styled.div`
-width: 36px;
-height: 36px;
-background: #FFFFFF;
-box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
-border-radius: 18px;
-display: flex;
-align-items: center;
-justify-content: center;
-`
-
-export const SortImg=styled.img`
-width: 16px;
-height: 14.4px;
-`
-
 
 export const InputCkeckBox=styled.input`
 width: 16px;
@@ -202,7 +175,7 @@ font-weight: 600;
 }
 `
 export const Form=styled.form`
-margin-top: 44px;
+margin-top: 32px;
 margin: auto;
 `
 export const Content=styled.div`
@@ -233,44 +206,19 @@ color: #2D3A45;
 text-indent: 6px;
 `
 export const Select=styled.select`
-height: 44px;
-width: 279px;
-border: 1px solid #EDEFF3;
-`
-export const SelectWrap=styled.div`
-height: 44px;
-width: 318px;
-display: flex;
-align-items: center;
-flex-direction: row;
-justify-content: space-between;
 border: 1px solid #EDEFF3;
 box-sizing: border-box;
 border-radius: 6px;
-`
-export const Inputk=styled.input`
-height: 14px;
-width: 14px;
-background: #FCB600;
-border-radius: 2px;
+height: 44px;
+width: 318px;
 `
 
-export const InputkWraper=styled.div`
-background: #EDEFF3;
-border-radius: 6px 0px 0px 6px;
-height: 44px;
-width: 44px;
-display: flex;
-align-items: center;
-justify-content: center;
-`
 export const Option=styled.option`
 font-family: SFProDisplay;
 font-size: 12px;
 line-height: 18px;
 letter-spacing: 0.4px;
 color: #2D3A45;
-padding: 0px 10px;
 `
 
 export const ImgDowloand=styled.div`
@@ -298,7 +246,7 @@ height: 35px;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 380px;
+margin-top: 220px;
 cursor: pointer;
 transition: all .8s ease-in-out;
 :hover{

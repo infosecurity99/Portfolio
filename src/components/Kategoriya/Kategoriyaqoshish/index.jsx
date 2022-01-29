@@ -59,7 +59,7 @@ const [visible, setVisible] = useState(false);
         headerStyle={{background:"red",display:'none' ,position:'relative'}}>
 
 
-           <Titles>Yangi maxsulot qo’shish</Titles>
+           <Titles style={{margin:'20px 0px 33px 0px'}}>Yangi kategori qo’shish</Titles>
 
            <Form>
 

@@ -12,6 +12,7 @@ import Katalog from '../pages/Katalog';
 import Buyurtmalar from '../pages/Buyurtmalar';
 import Maxsulotlar from '../components/Mahsulotlar/index'
 import Kategoriya from '../components/Kategoriya/index'
+import Filiallar  from '../components/Filiallar/index'
 
 export const sidebar = [
   {
@@ -43,7 +44,7 @@ export const sidebar = [
     title: 'Filiallar',
     path: '/filiallar',
     Icon: filial,
-    Component: Generic,
+    Component: Filiallar,
     hidden: false,
   },
   {
