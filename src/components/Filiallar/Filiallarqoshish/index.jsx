@@ -2,21 +2,29 @@ import React, { useState } from 'react';
 import { Drawer,Modal  } from 'antd';
 import 'antd/dist/antd.css';
 import {
+  GoogleMap,
+  Marker,
+  useJsApiLoader,
+  Autocomplete,
+  Polygon,
+} from '@react-google-maps/api';
+
+import {
   Add,Titles,Ass,
   Header,Label,Inputs1,
-  MenuH,Select,Option,
-  MenuV,Buttons,
+  MenuH,Select,Option,Maps,
+  MenuV,Buttons,LineInput,
   Toggle,ImgDowloand,
   Wrapper,Content,Imgs3,
   IconWrapper,Form,
-  Input,SortContent,
+  Input,SortContent,InputWrapers1,
   InputWraper,Search,Sort,SortImg,Ul ,Li ,InputCkeckBox,TextLi
 } from './style';
 import search from '../../../assets/imgs/search.png'
 import dow from '../../../assets/imgs/dow.png'
 
 
-export const Filiallarqoshish= ({ onClick }) => {
+export const Filiallarqoshish= ({ onClick ,location }) => {
 
 
   const [isActive, setIsActive] = useState('Yangi');
@@ -36,7 +44,7 @@ export const Filiallarqoshish= ({ onClick }) => {
     setIsModalVisible(false);
   };
 //Drawer
-
+const libraries = ['places'];
 const [visible, setVisible] = useState(false);
 
   const showDrawer = () => {
@@ -46,6 +54,52 @@ const [visible, setVisible] = useState(false);
   const onClose = () => {
     setVisible(false);
   };
+  //**************************************************** */
+  const [place, setPlace] = useState(null);
+  const [center, setCenter] = useState({ lat: 41.2995, lng: 69.2401 });
+
+  const { REACT_APP_MAP_KEY: mapKey } = process.env;
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: mapKey,
+    id: 'fastfood',
+    libraries,
+  });
+  const onPlaceChanged = (e) => {
+    console.log(place?.getPlace());
+    console.log(place?.getPlace()?.geometry?.location?.lat());
+    console.log(place?.getPlace()?.geometry?.location?.lng());
+    setCenter({
+      lat: place?.getPlace()?.geometry?.location?.lat(),
+      lng: place?.getPlace()?.geometry?.location?.lng(),
+    });
+  };
+
+  const paths = [
+    { lat: 25.774, lng: -80.19 },
+    { lat: 18.466, lng: -66.118 },
+    { lat: 32.321, lng: -64.757 },
+    { lat: 25.774, lng: -80.19 },
+    { lat: 24.774, lng: -80.19 },
+    { lat: 23.774, lng: -80.19 },
+  ];
+
+  const options = {
+    fillColor: 'lightblue',
+    fillOpacity: 1,
+    strokeColor: 'red',
+    strokeOpacity: 1,
+    strokeWeight: 2,
+    clickable: false,
+    draggable: false,
+    editable: false,
+    geodesic: false,
+    zIndex: 1,
+  };
+
+  const onLoad = (polygon) => {
+    console.log('polygon: ', polygon);
+  };
+  //********************************************** */
   
   return (
     <Header >
@@ -92,28 +146,19 @@ const [visible, setVisible] = useState(false);
         headerStyle={{background:"red",display:'none' ,position:'relative'}}>
 
 
-           <Titles>Yangi maxsulot qo’shish</Titles>
+           <Titles>Yangi filial qo’shish</Titles>
 
            <Form>
 
                 <Content>
-                     <Label>Maxsulot nomi</Label>
-                     <Inputs1 placeholder='Chizburger' />
+                     <Label>Filial nomi uz</Label>
+                     <Inputs1 placeholder='Xadra' />
                 </Content>
-                
-                <Content>
-                    <Label>Kategoriya</Label>
-
-                     <Select>
-                         <Option>Burger</Option>
-                         <Option>Pizza</Option> 
-                     </Select>
-
-              </Content>
+              
 
               <Content>
-                   <Label>Narxi</Label>
-                   <Inputs1 placeholder='18,500 UZS' />
+                   <Label>Filial nomi ru</Label>
+                   <Inputs1 placeholder='Xadra' />
               </Content>
 
               <Content>
@@ -122,15 +167,42 @@ const [visible, setVisible] = useState(false);
               </Content>
 
               <Content>
-                   <ImgDowloand>
-                        <Imgs3 src={dow}/>
-                        <Ass href="dowloand">Maxsulot rasmini yuklang</Ass>
-                  </ImgDowloand>
-              </Content>
+                  <Label>Ish vaqti</Label>
+                   <InputWrapers1>
+                      <Inputs1 kel placeholder='09:00' />
+                         <LineInput styled={{margin:'0px 5px'}}></LineInput>
+                      <Inputs1 kel  placeholder='20:00' />
+                   </InputWrapers1>
+             </Content>
+
+             <Content>
+                 <Label>Filial mo’ljal</Label>
+                 <Inputs1 placeholder='Filial mo’ljal' />
+            </Content>
+
+            <Maps>
+
+            {isLoaded && (
+              <GoogleMap  
+                id='fastfood'
+                zoom={12}
+                center={center}
+                mapContainerStyle={{
+                  width: '329.82px',
+                  height: '174.83px',
+                  position:'relative'
+                }}
+              >
+           
+                <Marker position={center} />
+                <Polygon onLoad={onLoad} paths={paths} options={options} />
+              </GoogleMap>
+            )}
+   
+            </Maps>
 
               <Buttons>Saqlash</Buttons>
            </Form>
-       
        </Drawer>
 
     </Header>

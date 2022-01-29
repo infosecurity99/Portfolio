@@ -197,41 +197,17 @@ border: 1px solid #EDEFF3;
 box-sizing: border-box;
 border-radius: 6px;
 height: 44px;
-width: 318px;
+width:${(props)=>props.kel? '91px':' 318px'};
 font-family: SFProDisplay;
 font-size: 12px;
 line-height: 18px;
 letter-spacing: 0.4px;
 color: #2D3A45;
 text-indent: 6px;
-`
-export const Select=styled.select`
-border: 1px solid #EDEFF3;
-box-sizing: border-box;
-border-radius: 6px;
-height: 44px;
-width: 318px;
-`
-
-export const Option=styled.option`
-font-family: SFProDisplay;
-font-size: 12px;
-line-height: 18px;
-letter-spacing: 0.4px;
-color: #2D3A45;
-`
-
-export const ImgDowloand=styled.div`
-height: 97px !important;
-width: 318px;
-border: 1px dashed #EDEFF3;
-box-sizing: border-box;
-border-radius: 6px;
-margin-bottom: 24px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+display: ${(props)=>props.kel && 'flex'};
+align-items: ${(props)=>props.kel && 'center'};
+justify-content: ${(props)=>props.kel && 'center'};
+text-indent: ${(props)=>props.kel && "23px"};
 `
 export const Buttons=styled.div`
 font-family: SFProDisplay;
@@ -246,7 +222,7 @@ height: 35px;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 220px;
+margin-top: 79px;
 cursor: pointer;
 transition: all .8s ease-in-out;
 :hover{
@@ -269,5 +245,20 @@ mix-blend-mode: normal;
 opacity: 0.6;
 margin-bottom: 11px;
 `
-
-
+export const InputWrapers1=styled.div`
+display: flex;
+align-items: center;
+`
+export const LineInput=styled.div`
+width: 22px;
+height: 1px;
+mix-blend-mode: normal;
+opacity: 0.3;
+border: 1px solid #979797;
+margin: 0px 10px;
+`
+export const Maps=styled.div`
+width: 329.82px;
+height: 174.83px;
+margin-top: 4px;
+`
