@@ -131,3 +131,87 @@ export const MenuV = styled(menuV)`
   height: 16px;
   fill: ${({ active }) => (active ? '#8D9BA8' : 'transparent')};
 `;
+
+export const Content=styled.div`
+height: 100%;
+width: 100%;
+display: flex;
+`
+
+export const ContentRight=styled.div`
+flex: 5;
+border: 1px solid black;
+height: 100%;
+`
+
+export const ContentLeft=styled.div`
+flex: 7;
+border: 1px solid white;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+`
+export const LeftTitle=styled.div`
+height: 18px;
+font-family: SFProDisplay;
+font-size: 16px;
+line-height: 18px;
+letter-spacing: 0.533333px;
+color: #2D3A45;
+margin-bottom: 20px;
+`
+
+export const ContentLefterTabs=styled.div`
+width: 539px;
+height: 48px;
+background: #EDEFF3;
+border-radius: 24px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+padding: 0px 27px;
+`
+export const ContentLefterTab=styled.div`
+font-family: SFProDisplay;
+font-size: 13px;
+line-height: 16px;
+color: #2D3A45;
+mix-blend-mode: normal;
+opacity: 0.35;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+width: ${(props)=>props.active1? "99px":" "};
+height: ${(props)=>props.active1? "30":" "};
+background:  ${(props)=>props.active1? "#FFF":" "};
+box-shadow: ${(props)=>props.active?"0px 2px 2px rgba(174, 176, 181, 0.314986)":""};
+border-radius: ${(props)=>props.active1? "18px":" "} ;
+padding:${(props)=>props.active1? "7px 20px":" "} ;
+z-index:${(props)=>props.active1? "1":" "} ;
+cursor: pointer;
+`
+
+export const CardWrapper=styled.div`
+margin-top: 19px;
+border: 1px solid black;
+display: flex;
+height: 100%;
+flex-wrap: wrap;
+
+`
+export const Cards=styled.div`
+width: 255px;
+height: 210px;
+background: #FFFFFF;
+box-shadow: 0px 20px 25px rgba(176, 177, 181, 0.432802);
+border-radius: 6px;
+margin: 14px;
+`
+
+export const CardImg=styled.img`
+width: 255px;
+height: 136.54px;
+`
