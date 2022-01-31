@@ -250,15 +250,21 @@ color: #2D3A45;
 
 export const ImgDowloand=styled.div`
 height: 97px !important;
-width: 318px;
+width: 318px !important;
 border: 1px dashed #EDEFF3;
 box-sizing: border-box;
 border-radius: 6px;
 margin-bottom: 24px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.ant-upload-text{
+  font-family: SFProDisplay;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.4px;
+color: #2D3A45;
+mix-blend-mode: normal;
+opacity: 0.6;
+margin-bottom: 11px;
+}
 `
 export const Buttons=styled.div`
 font-family: SFProDisplay;
@@ -286,15 +292,3 @@ export const Imgs3=styled.img`
 width: 22px;
 height: 18px;
 `
-export const Ass=styled.a`
-font-family: SFProDisplay;
-font-size: 12px;
-line-height: 18px;
-letter-spacing: 0.4px;
-color: #2D3A45;
-mix-blend-mode: normal;
-opacity: 0.6;
-margin-bottom: 11px;
-`
-
-

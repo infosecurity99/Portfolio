@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
   height: 90px;
   align-items: center;
   border: 1px solid #e5e5e5;
+  background-color: black;
 `;
 
 export const Add = styled.div`

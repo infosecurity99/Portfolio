@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Drawer,Modal  } from 'antd';
+import { Drawer,Modal  ,Upload, message } from 'antd';
 import 'antd/dist/antd.css';
+import { InboxOutlined } from '@ant-design/icons';
 import {
   Add,Titles,Ass,
   Header,Label,Inputs1,
@@ -14,8 +15,34 @@ import {
 } from './style';
 import search from '../../../assets/imgs/search.png'
 import sort from '../../../assets/imgs/sort.png'
-import dow from '../../../assets/imgs/dow.png'
+
 export const Mahsulotqoshish= ({ onClick }) => {
+  const { Dragger } = Upload;
+/****************************************************** */
+const props = {
+  height: '97px',
+  widht:'318px !important',
+  name: 'file',
+  multiple: true,
+  action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+  onChange(info) {
+    const { status } = info.file;
+    if (status !== 'uploading') {
+      console.log(info.file, info.fileList);
+    }
+    if (status === 'done') {
+   //   message.success(`${info.file.name} file uploaded successfully.`);
+    } else if (status === 'error') {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  },
+  onDrop(e) {
+    console.log('Dropped files', e.dataTransfer.files);
+  },
+};
+/**************************************** */
+
+
   const [isActive, setIsActive] = useState('Yangi');
   const [on, setOn] = useState(true);
 
@@ -95,7 +122,6 @@ const [visible, setVisible] = useState(false);
         <Drawer title="Basic Drawer" placement="right" onClose={onClose} visible={visible}
         headerStyle={{background:"red",display:'none' ,position:'relative'}}>
 
-
            <Titles>Yangi maxsulot qo’shish</Titles>
 
            <Form>
@@ -127,8 +153,13 @@ const [visible, setVisible] = useState(false);
 
               <Content>
                    <ImgDowloand>
-                        <Imgs3 src={dow}/>
-                        <Ass href="dowloand">Maxsulot rasmini yuklang</Ass>
+                   <Dragger headers={{height:"97px",widht:'318px'}} {...props} style={{height:"97px",widht:'318px'}}>
+                   <p className="ant-upload-drag-icon" style={{height:"97px",widht:'318px'}}>
+                     <InboxOutlined />
+                     <p className="ant-upload-text">Maxsulot rasmini yuklang</p>
+                   </p>
+                 
+                 </Dragger>
                   </ImgDowloand>
               </Content>
 

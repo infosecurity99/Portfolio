@@ -30,6 +30,7 @@ export const ProductCard = ({ value }) => {
           </Info.Text>
         </Timer>
       </Wrapper>
+
       <Wrapper flex>
         <Info>
           <Info.User />
@@ -42,6 +43,7 @@ export const ProductCard = ({ value }) => {
           </Info>
         </Info>
       </Wrapper>
+
       <Wrapper flex>
         <Info>
           <Info.Clipboard />
@@ -63,6 +65,7 @@ export const ProductCard = ({ value }) => {
           </Info>
         </Info>
       </Wrapper>
+      
       <Wrapper flex last>
         <Footer>
           <div>

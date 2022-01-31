@@ -16,6 +16,7 @@ export const Container = styled.div`
   :hover {
     box-shadow: 0px 20px 25px rgba(176, 177, 181, 0.432802);
   }
+ 
 `;
 
 export const Wrapper = styled.div`
@@ -180,3 +181,4 @@ export const Footer = styled.div`
   width: 100%;
   margin-bottom: 15px;
 `;
+

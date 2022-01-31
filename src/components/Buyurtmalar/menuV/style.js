@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   margin: 35px;
   overflow-x: scroll;
+  
 `;
 
 export const Wrapper = styled.div`
@@ -12,4 +13,5 @@ export const Wrapper = styled.div`
   min-width: 300px;
   margin-right: 15px;
   flex: 1;
+
 `;

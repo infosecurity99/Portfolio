@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Done } from './style';
 
-export const Index = () => {
+export const Index = ({ onClick }) => {
   return (
     <Container>
-      <Done />
+      <Done   onClick={onClick}/>
     </Container>
   );
 };

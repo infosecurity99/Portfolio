@@ -14,6 +14,7 @@ import Maxsulotlar from '../components/Mahsulotlar/index'
 import Kategoriya from '../components/Kategoriya/index'
 import Filiallar  from '../components/Filiallar/index'
 import Mijozlar from '../components/Mijozlar/index'
+import Hodimlar from '../components/Hodimlar/index'
 
 export const sidebar = [
   {
@@ -69,7 +70,7 @@ export const sidebar = [
     title: 'Hodimlar',
     path: '/hodimlar',
     Icon: hodimlar,
-    Component: Generic,
+    Component: Hodimlar,
     hidden: false,
   },
   {

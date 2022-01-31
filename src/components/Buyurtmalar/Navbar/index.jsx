@@ -150,10 +150,7 @@ const [visible, setVisible] = useState(false);
           </IconWrapper>
         </Toggle>
       </Wrapper>
-
-
       {/***************************************/}
-
       <Drawer
      width="1039px"
       headerStyle={{display:'none'}}
@@ -330,8 +327,6 @@ const [visible, setVisible] = useState(false);
 
       </Content>
     </Drawer>
-
-
     </Header>
   );
 };
