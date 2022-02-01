@@ -87,6 +87,7 @@ Tab.Item = styled.div`
   color: #b7bcc0;
   cursor: pointer;
   transition: all 0.3s;
+
 `;
 export const Toggle = styled.div`
   width: 100px;

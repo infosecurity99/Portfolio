@@ -3,22 +3,24 @@ import { Drawer,Modal  ,Upload, message } from 'antd';
 import 'antd/dist/antd.css';
 import { InboxOutlined } from '@ant-design/icons';
 import {
-  Add,Titles,Ass,
+  Add,Titles,
   Header,Label,Inputs1,
   MenuH,Select,Option,
   MenuV,Buttons,
   Toggle,ImgDowloand,
-  Wrapper,Content,Imgs3,
+  Wrapper,Content,
   IconWrapper,Form,
   Input,SortContent,
   InputWraper,Search,Sort,SortImg,Ul ,Li ,InputCkeckBox,TextLi
 } from './style';
 import search from '../../../assets/imgs/search.png'
 import sort from '../../../assets/imgs/sort.png'
-
+import {mahsulotlar} from '../../../mock/mahsulotlar'
+import Mahsulotlar1 from '../Mahsulotlar1/index';
 export const Mahsulotqoshish= ({ onClick }) => {
   const { Dragger } = Upload;
 /****************************************************** */
+
 const props = {
   height: '97px',
   widht:'318px !important',
@@ -28,7 +30,7 @@ const props = {
   onChange(info) {
     const { status } = info.file;
     if (status !== 'uploading') {
-      console.log(info.file, info.fileList);
+      console.log(info.file.name, info.fileList);
     }
     if (status === 'done') {
    //   message.success(`${info.file.name} file uploaded successfully.`);
@@ -41,7 +43,9 @@ const props = {
   },
 };
 /**************************************** */
+const [contacts,setContacts]=useState(mahsulotlar)
 
+/************** */
 
   const [isActive, setIsActive] = useState('Yangi');
   const [on, setOn] = useState(true);
@@ -71,9 +75,49 @@ const [visible, setVisible] = useState(false);
     setVisible(false);
   };
   
+/********************************** */
+const [name, setName] = useState( 'Chizburger');
+const Named=(e)=>{
+setName(e.target.value)
+}
+
+
+const [kategoriya, setkategoriya] = useState( 'Burger1');
+const kategoriya1=(newSelected)=>{
+setkategoriya(newSelected)
+}
+
+const [price, setPrice]=useState('18,500 UZS')
+const Price=(e)=>{
+setPrice(e.target.value)
+}
+
+const [desc ,setDesc]=useState('')
+const Desc=(e)=>{
+  setDesc(e.target.value)
+}
+
+const [rasim,setRasim]=useState('')
+const Rasim=(e)=>{
+setRasim(e.target.value)
+}
+
+/** */
+const handelSubmit=(event)=>{
+const newConcat={
+  id:Date.now(),
+  name:name,
+  kategoriya:kategoriya,
+  price:price,
+  desc:desc,
+}
+const newcontacts=[...contacts,newConcat];
+setContacts(newcontacts)
+}
+  /********************************** */
+
   return (
     <Header >
- 
       <Wrapper order='1'>
         <Add.Plus  onClick={showDrawer}/>
         <Add.Title>Yangi buyurtma <span style={{display:'block',fontWeight:'bold'}}>qo'shish</span></Add.Title>
@@ -128,27 +172,29 @@ const [visible, setVisible] = useState(false);
 
                 <Content>
                      <Label>Maxsulot nomi</Label>
-                     <Inputs1 placeholder='Chizburger' />
+                     <Inputs1 placeholder='Chizburger' value={name}  onChange={(e)=>Named(e)} />
                 </Content>
                 
                 <Content>
                     <Label>Kategoriya</Label>
 
-                     <Select>
-                         <Option>Burger</Option>
-                         <Option>Pizza</Option> 
+                     <Select value={kategoriya}  onChange={(e)=>kategoriya1(e.target.value)}>
+                         <Option>Burger1</Option>
+                         <Option>Pizza2</Option> 
+                         <Option>Burger3</Option>
+                         <Option>Pizza4</Option> 
                      </Select>
 
               </Content>
 
               <Content>
                    <Label>Narxi</Label>
-                   <Inputs1 placeholder='18,500 UZS' />
+                   <Inputs1 placeholder='18,500 UZS'  value={price}  onChange={(e)=>Price(e)} />
               </Content>
 
               <Content>
                     <Label>Qo’shimcha ma’lumot</Label>
-                   <Inputs1 placeholder='Katta burgur, 2 karra pishloq bor' />
+                   <Inputs1 placeholder='Katta burgur, 2 karra pishloq bor' value={desc}  onChange={(e)=>Desc(e)}  />
               </Content>
 
               <Content>
@@ -163,11 +209,10 @@ const [visible, setVisible] = useState(false);
                   </ImgDowloand>
               </Content>
 
-              <Buttons>Saqlash</Buttons>
+              <Buttons  onClick={(event)=>handelSubmit(event)}>Saqlash</Buttons>
            </Form>
        
        </Drawer>
-
     </Header>
   );
 };

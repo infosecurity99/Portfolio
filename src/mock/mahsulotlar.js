@@ -2,7 +2,7 @@ export  const mahsulotlar=[
 {
     id:1,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'1Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -10,7 +10,7 @@ export  const mahsulotlar=[
 {
     id:2,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'2Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -18,7 +18,7 @@ export  const mahsulotlar=[
 {
     id:3,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'3Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -26,7 +26,7 @@ export  const mahsulotlar=[
 {
     id:4,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'4Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -34,7 +34,7 @@ export  const mahsulotlar=[
 {
     id:5,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'5Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -42,7 +42,7 @@ export  const mahsulotlar=[
 {
     id:6,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'6Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -50,7 +50,7 @@ export  const mahsulotlar=[
 {
     id:7,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'7Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',
@@ -58,7 +58,23 @@ export  const mahsulotlar=[
 {
     id:8,
     img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
-    title:'Lavash mini',
+    title:'8Lavash mini',
+    kategoriya:'Lavash',
+    price:'180$',
+    othername:'Kichkina lavash, bla bla',
+},
+{
+    id:9,
+    img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
+    title:'7Lavash mini',
+    kategoriya:'Lavash',
+    price:'180$',
+    othername:'Kichkina lavash, bla bla',
+},
+{
+    id:10,
+    img:'https://www.seekpng.com/ima/u2y3a9u2w7q8a9r5/',
+    title:'8Lavash mini',
     kategoriya:'Lavash',
     price:'180$',
     othername:'Kichkina lavash, bla bla',

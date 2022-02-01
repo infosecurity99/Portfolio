@@ -12,6 +12,7 @@ import {Container,
      import {mahsulotlar} from  '../../../mock/mahsulotlar'
 
 const Mahsulotlar1 = () => {
+
 const [daka, setdaka] = useState(mahsulotlar);
 
      const Deleteds=(id)=>{
@@ -19,6 +20,15 @@ const [daka, setdaka] = useState(mahsulotlar);
       setdaka(daka.filter((value)=>value.id!==id))
      }
      
+
+     const handleEditFormSubmit=(id)=>{
+       console.log(id)
+       const datas=mahsulotlar.filter((value)=>value.id===id)
+       const newData={
+            id:Date.now(),
+            
+       }
+     }
   return(
       <Container>
              <Content>
@@ -32,7 +42,7 @@ const [daka, setdaka] = useState(mahsulotlar);
                          <Price>{value.price}</Price>
                          <OtherName>{value.othername}</OtherName>
   
-                           <Edited style={{marginLeft:"60px"}}>
+                           <Edited style={{marginLeft:"60px"}}  onClick={()=>handleEditFormSubmit(value.id)}>
                                 <EditedImg  src={pencil}/>
                            </Edited>
   

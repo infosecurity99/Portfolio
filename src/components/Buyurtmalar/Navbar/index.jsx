@@ -22,6 +22,7 @@ import { Drawer, Button, Space, Card } from 'antd';
 const libraries = ['places'];
 
 export const Navbar = ({ onClick , location}) => {
+
 /**************************** */
 const [place, setPlace] = useState(null);
 const [center, setCenter] = useState({ lat: 41.2995, lng: 69.2401 });
@@ -127,7 +128,7 @@ const [visible, setVisible] = useState(false);
           </Tab.Item>
         </Tab>
       </Wrapper>
-      {/* 3 */}
+      {/* 3 */    }
       <Wrapper order='3'>
         <Toggle>
           <IconWrapper

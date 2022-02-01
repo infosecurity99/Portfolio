@@ -23,8 +23,8 @@ export const Sidebar = () => {
         </Wrapper>
       </Header>
       <Wrapper left>
-        {sidebar.map(({ title, Icon, path }) => (
-          <Link activeStyle={activeStyle} to={path}>
+        {sidebar.map(({ title, Icon, path ,id}) => (
+          <Link activeStyle={activeStyle} to={path} key={id}>
             <IconWrapper>
               <Icon />
             </IconWrapper>

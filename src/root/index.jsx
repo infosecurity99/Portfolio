@@ -16,13 +16,13 @@ export const Root = () => {
       <Container>
         <Switch>
           {sidebar.map(({ id, path, Component }) => (
-            <Route path={path} component={Sidebar} />
+            <Route key={id} path={path} component={Sidebar} />
           ))}
         </Switch>
 
         <Switch>
           {sidebar.map(({ id, path, Component }) => (
-            <Route path={path} component={Component} />
+            <Route key={id} path={path} component={Component} />
           ))}
           <Route exact path='/'>
             <Redirect to='/buyurtmalar' />
