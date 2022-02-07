@@ -10,7 +10,7 @@ import {
 const libraries = ['places'];
 export const Katalog = ({ location }) => {
   const [place, setPlace] = useState(null);
-  const [center, setCenter] = useState({ lat: 41.2995, lng: 69.2401 });
+  const [center, setCenter] = useState({ lat: 37.827149, lng: 67.585916 });
 
   const { REACT_APP_MAP_KEY: mapKey } = process.env;
   const { isLoaded } = useJsApiLoader({
